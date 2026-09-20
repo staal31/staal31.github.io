@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>警花第一次又紧又嫩 - 警花图集与真实故事分享</title>
+    <meta name="description" content="本站汇集警花第一次执勤、写真摄影及日常生活分享。包含警花制服美图、执勤瞬间、人物专访及相关故事，展现警花群体的专业与风采。">
+    <meta name="keywords" content="警花, 警花图集, 警花写真, 警花第一次, 女警, 执勤风采">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+        }
+
+        /* Content Grid */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        /* Card Styles */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-color: #e0e0e0;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #f0f2f5;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            transition: background 0.2s;
+        }
+
+        .tag:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .ranking-list {
+            list-style: none;
+        }
+
+        .ranking-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+
+        .ranking-num {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ddd;
+            min-width: 20px;
+        }
+
+        .ranking-item:nth-child(1) .ranking-num { color: #ff4757; }
+        .ranking-item:nth-child(2) .ranking-num { color: #ffa502; }
+        .ranking-item:nth-child(3) .ranking-num { color: #2ed573; }
+
+        .ranking-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .ranking-info p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #ccc;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+
+            nav ul {
+                margin-top: 10px;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">警花<span>图集</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">写真图集</a></li>
+                    <li><a href="#">执勤瞬间</a></li>
+                    <li><a href="#">人物专访</a></li>
+                    <li><a href="#">专题故事</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>警花第一次又紧又嫩</h1>
+        <p>记录警花群体在初次执勤、日常训练及工作中的真实状态。聚焦职业女性在制服下的独特魅力与严谨风貌。</p>
+    </section>
+
+    <div class="container">
+        <!-- Main Content Area -->
+        <main class="main-content">
+            
+            <!-- Section 1: Featured Stories -->
+            <section>
+                <h2 class="section-title">精选人物故事</h2>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <span class="card-badge">人物专访</span>
+                            <img src="https://picsum.photos/seed/police1/400/300" alt="警花执勤照片">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">初次穿上警服的紧张与期待</h3>
+                            <p class="card-desc">作为一名刚入职的新警，她在第一次穿上警服时的心情如何？本文记录了她从警校毕业到正式上岗的第一天经历。</p>
+                            <div class="card-footer">
+                                <span>2023-10-15</span>
+                                <a href="#" class="read-more">阅读全文 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <span class="card-badge">执勤瞬间</span>
+                            <img src="https://picsum.photos/seed/police2/400/300" alt="警花在岗">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">深夜执勤的坚守与柔情</h3>
+                            <p class="card-desc">城市深夜的灯火阑珊，她独自一人坚守岗位，展现的是女性特有的细腻与坚韧，守护一方平安。</p>
+                            <div class="card-footer">
+                                <span>2023-10-12</span>
+                                <a href="#" class="read-more">阅读全文 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <span class="card-badge">写真图集</span>
+                            <img src="https://picsum.photos/seed/police3/400/300" alt="警花写真">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">训练场上的飒爽英姿</h3>
+                            <p class="card-desc">汗水与微笑并存，她在训练场上挥洒汗水，每一次出拳、每一次踢腿都充满了力量感。</p>
+                            <div class="card-footer">
+                                <span>2023-10-10</span>
+                                <a href="#" class="read-more">阅读全文 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Section 2: Featured Images -->
+            <section>
+                <h2 class="section-title">热门图集精选</h2>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/police4/400/300" alt="警花执勤">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">街头执勤的瞬间记录</h3>
+                            <div class="card-footer">
+                                <span>浏览量: 2.3万</span>
+                                <a href="#" class="read-more">查看图集 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/police5/400/300" alt="警花制服">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">制服诱惑：专业与美丽</h3>
+                            <div class="card-footer">
+                                <span>浏览量: 1.8万</span>
+                                <a href="#" class="read-more">查看图集 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/police6/400/300" alt="警花工作">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">户籍窗口的耐心解答</h3>
+                            <div class="card-footer">
+                                <span>浏览量: 9.5千</span>
+                                <a href="#" class="read-more">查看图集 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar Area -->
+        <aside class="sidebar">
+            <!-- Tags -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">热门标签</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">警花写真</a>
+                    <a href="#" class="tag">女警风采</a>
+                    <a href="#" class="tag">制服美女</a>
+                    <a href="#" class="tag">执勤现场</a>
+                    <a href="#" class="tag">警务训练</a>
+                    <a href="#" class="tag">人物专访</a>
+                    <a href="#" class="tag">热门话题</a>
+                </div>
+            </div>
+
+            <!-- Ranking -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">本周排行</h3>
+                <ul class="ranking-list">
+                    <li class="ranking-item">
+                        <span class="ranking-num">1</span>
+                        <div class="ranking-info">
+                            <h4>警花第一次又紧又嫩</h4>
+                            <p>人物专访</p>
+                        </div>
+                    </li>
+                    <li class="ranking-item">
+                        <span class="ranking-num">2</span>
+                        <div class="ranking-info">
+                            <h4>深夜执勤的坚守</h4>
+                            <p>执勤瞬间</p>
+                        </div>
+                    </li>
+                    <li class="ranking-item">
+                        <span class="ranking-num">3</span>
+                        <div class="ranking-info">
+                            <h4>飒爽英姿训练照</h4>
+                            <p>写真图集</p>
+                        </div>
+                    </li>
+                    <li class="ranking-item">
+                        <span class="ranking-num">4</span>
+                        <div class="ranking-info">
+                            <h4>初次穿上警服</h4>
+                            <p>人物故事</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Ad Placeholder -->
+            <div class="sidebar-widget" style="text-align: center; background: #eee; height: 250px; display: flex; align-items: center; justify-content: center; color: #999;">
+                广告位
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 警花图集分享网. 保留所有权利.</p>
+        <p>本站内容仅供交流与分享，旨在展示警花群体的职业风采。请遵守相关法律法规，文明上网。</p>
+    </footer>
+
+</body>
+</html>
