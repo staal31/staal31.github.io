@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佛跳墙下载 - 精品菜肴制作与风味复原指南</title>
+    <meta name="description" content="佛跳墙下载相关资源与制作指南。本文详细解析佛跳墙的历史渊源、传统做法、现代预制菜选择及正宗风味复原技巧，为您提供从食材准备到烹饪步骤的全方位指导。">
+    <meta name="keywords" content="佛跳墙下载, 佛跳墙做法, 佛跳墙食谱, 预制菜, 传统名菜, 海鲜煲">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --bg-color: #FAF7F2;
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(139, 69, 19, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-light);
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #FFF8F0 0%, #FFE4C4 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(210, 105, 30, 0.3);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Guide Cards Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            transition: transform 0.3s;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .card-link {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Recipe Section */
+        .recipe-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .recipe-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .step-list {
+            counter-reset: step;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .step-item::before {
+            counter-increment: step;
+            content: counter(step);
+            background-color: var(--primary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .step-text p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .recipe-sidebar {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            height: fit-content;
+        }
+
+        .recipe-sidebar h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .ingredient-list li {
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .ingredient-list li strong {
+            color: var(--text-main);
+        }
+
+        /* Download & Resources Section */
+        .download-section {
+            background-color: #FFF5EB;
+        }
+
+        .download-box {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .download-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .download-info {
+            margin: 20px 0;
+            color: var(--text-light);
+        }
+
+        .resource-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .resource-tag {
+            background: #F0F0F0;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: #fff;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f5f5f5;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .recipe-layout {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>食谱</span> 风味指南
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#intro" class="active">起源</a></li>
+                    <li><a href="#recipe">做法</a></li>
+                    <li><a href="#download">下载指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>佛跳墙：臻味传承与制作指南</h1>
+                <p>探寻这道“闽菜之冠”的历史渊源，获取从食材处理到慢火煨制的专业制作方案，在家复刻这一中华传统名菜。</p>
+                <a href="#recipe" class="cta-button">开始制作</a>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section id="intro">
+            <div class="container">
+                <div class="section-title">
+                    <h2>什么是佛跳墙？</h2>
+                    <p>不仅仅是“下载”一份食谱，更是了解一道文化瑰宝</p>
+                </div>
+                <div class="grid-3">
+                    <article class="card">
+                        <div class="card-icon">📜</div>
+                        <h3>历史渊源</h3>
+                        <p>佛跳墙相传起源于清朝，因坛盖启时香气四溢，引得和尚跳墙来吃而得名。它集山珍海味于一体，是闽菜中的代表作。</p>
+                        <a href="#" class="card-link">了解更多历史 &rarr;</a>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">🦀</div>
+                        <h3>核心食材</h3>
+                        <p>传统做法需精选鲍鱼、海参、鱼翅、干贝等十几种名贵食材，辅以鸡肉、鸭肉等打底，讲究“荤素搭配，软烂入味”。</p>
+                        <a href="#" class="card-link">食材清单详解 &rarr;</a>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">🔥</div>
+                        <h3>烹饪精髓</h3>
+                        <p>关键在于“煨”。需用绍兴酒坛，以文火慢煨数小时，使食材精华相互渗透，汤汁浓郁，回味无穷。</p>
+                        <a href="#" class="card-link">烹饪技巧分享 &rarr;</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Section -->
+        <section id="recipe" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>经典佛跳墙制作流程</h2>
+                    <p>标准食谱与步骤解析</p>
+                </div>
+                
+                <div class="recipe-layout">
+                    <div class="recipe-content">
+                        <h3>准备工作</h3>
+                        <div class="step-list">
+                            <div class="step-item">
+                                <div class="step-text">
+                                    <h4>食材预处理</h4>
+                                    <p>海参、鲍鱼、鱼翅等干货需提前泡发。干贝蒸软撕丝，鸡肉鸭肉切块焯水去腥。所有食材需清洗干净，沥干水分。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-text">
+                                    <h4>炒制底料</h4>
+                                    <p>炒锅烧热，下猪油，放入葱姜蒜爆香。加入冰糖炒至微黄，倒入绍酒、酱油等调料，炒出浓郁的酱香味。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-text">
+                                    <h4>入坛煨制</h4>
+                                    <p>将处理好的食材分层码入绍兴酒坛中，加入高汤没过食材。坛口用荷叶封住，盖上坛盖，用黄泥或锡纸封口。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-text">
+                                    <h4>文火慢煨</h4>
+                                    <p>将酒坛放入蒸笼或大锅中，用中小火煨制3-4小时。期间注意保持水量，避免烧干。揭盖时香气扑鼻，即可上桌。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <aside class="recipe-sidebar">
+                        <h4>主要食材参考</h4>
+                        <ul class="ingredient-list">
+                            <li><strong>主料：</strong>鲍鱼、海参、鱼翅、干贝</li>
+                            <li><strong>辅料：</strong>鸡肉、猪蹄、火腿、鸽蛋</li>
+                            <li><strong>调料：</strong>绍酒、生抽、冰糖、葱姜</li>
+                            <li><strong>容器：</strong>绍兴酒坛、荷叶</li>
+                        </ul>
+                        <div style="margin-top: 30px; padding: 15px; background: #FFF8F0; border-radius: 6px; font-size: 0.9rem; color: #666;">
+                            <strong>小贴士：</strong>如果没有专业的酒坛，可以使用深口砂锅或高压锅替代，但风味会有所差异。
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download & Resources Section -->
+        <section id="download" class="download-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>食谱与资源下载</h2>
+                    <p>获取电子版食谱与烹饪辅助工具</p>
+                </div>
+                
+                <div class="download-box">
+                    <div class="download-icon">📥</div>
+                    <h3>高清食谱PDF下载</h3>
+                    <p class="download-info">包含详细步骤图解、食材采购清单及营养分析。</p>
+                    <a href="#" class="cta-button">下载食谱电子书</a>
+                    
+                    <div class="resource-list">
+                        <span class="resource-tag">高清步骤图</span>
+                        <span class="resource-tag">食材处理视频</span>
+                        <span class="resource-tag">营养搭配表</span>
+                        <span class="resource-tag">宴客摆盘指南</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 50px;">
+                    <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.5rem;">预制菜选购建议</h3>
+                    <div class="grid-3">
+                        <div class="card" style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 10px;">🥘</div>
+                            <h4>传统手工版</h4>
+                            <p style="font-size: 0.9rem;">食材丰富，需简单加热，适合追求正宗口感的家庭。</p>
+                        </div>
+                        <div class="card" style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 10px;">⚡</div>
+                            <h4>便捷料理包</h4>
+                            <p style="font-size: 0.9rem;">半成品，加热即食，适合时间紧张或烹饪新手。</p>
+                        </div>
+                        <div class="card" style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 10px;">🧂</div>
+                            <h4>汤底调料包</h4>
+                            <p style="font-size: 0.9rem;">搭配自购海鲜使用，还原度极高，性价比之选。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                    <p>关于佛跳墙制作与选购的疑问</p>
+                </div>
+                
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-question">佛跳墙最难的步骤是什么？</div>
+                        <div class="faq-answer">最难的在于食材的泡发处理和长时间煨制过程中的火候控制。泡发不当会影响口感，火候不够则鲜味无法释放。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">可以用高压锅做佛跳墙吗？</div>
+                        <div class="faq-answer">可以。使用高压锅可以大大缩短烹饪时间，但风味会比传统砂锅或酒坛慢火煨制略逊一筹，口感稍显粗糙。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">在家制作成本高吗？</div>
+                        <div class="faq-answer">正宗佛跳墙成本较高，因为涉及大量干海货。但如果是简化版，使用部分新鲜食材替代，成本会降低不少。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">哪里可以下载到标准的食谱？</div>
+                        <div class="faq-answer">本站已提供标准食谱下载链接，您也可以参考各大美食APP或专业烹饪书籍中的相关章节。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>风味指南</h4>
+                    <ul>
+                        <li><a href="#">中华美食</a></li>
+                        <li><a href="#">传统菜谱</a></li>
+                        <li><a href="#">烹饪技巧</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源下载</h4>
+                    <ul>
+                        <li><a href="#">高清食谱PDF</a></li>
+                        <li><a href="#">食材处理视频</a></li>
+                        <li><a href="#">营养分析工具</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系合作</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 风味指南网. All Rights Reserved. 本站提供食谱下载与制作指导。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close others
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
