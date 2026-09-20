@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="军营求生 - 提供全面的军营生存指南、野外生存技能、军事体能训练计划及新兵入伍适应技巧，助你快速适应军营生活。">
+    <meta name="keywords" content="军营求生, 军队生存指南, 新兵适应, 野外生存训练, 军事体能">
+    <title>军营求生 - 军事生存技能与训练指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --text-color: #333;
+            --bg-light: #f4f6f8;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #e74c3c;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+            opacity: 0.9;
+        }
+
+        nav a:hover {
+            opacity: 1;
+            color: #ecf0f1;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.7)), url('https://picsum.photos/seed/militarycamp/1600/600.jpg') center/cover no-repeat;
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #a93226;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section Title */
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            border-top: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            border-top-color: var(--accent-color);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .card-text {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .card-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .card-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* List Style */
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .list-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #ecf0f1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .list-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .list-content p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Sidebar */
+        aside {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg-light);
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 15px;
+            background-color: var(--bg-light);
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 15px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #fafafa;
+        }
+
+        .faq-answer p {
+            padding: 15px 20px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #bdc3c7;
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                display: none; /* Simplified mobile nav for this demo */
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span>⚔</span> 军营求生
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#intro">入门指南</a></li>
+                    <li><a href="#skills">生存技能</a></li>
+                    <li><a href="#fitness">体能训练</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>从新兵到老兵的蜕变之路</h1>
+            <p>掌握核心生存法则，科学适应高强度军事训练，建立钢铁般的意志与体魄。</p>
+            <div>
+                <a href="#skills" class="btn">开始学习</a>
+                <a href="#faq" class="btn btn-outline">了解更多</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Intro Section -->
+            <section id="intro" style="margin-bottom: 60px;">
+                <div class="section-header">
+                    <h2>什么是军营求生？</h2>
+                </div>
+                <div class="grid-2">
+                    <article>
+                        <h3>适应新环境的心理建设</h3>
+                        <p>军营求生不仅指体能上的极限挑战，更是一场心理博弈。对于新兵而言，面对严格的纪律、陌生的环境和严苛的考核，建立心理防线至关重要。这包括学会在压力下保持冷静、接受批评与自我反思，以及培养“服从”与“团队协作”的意识。</p>
+                        <br>
+                        <p>适应过程通常分为三个阶段：蜜月期（兴奋与好奇）、应激期（焦虑与想家）和现实期（接受与融入）。了解这一过程有助于您提前做好心理准备，平稳度过新兵连的磨合期。</p>
+                    </article>
+                    <article>
+                        <div style="background: #e8ecef; padding: 20px; border-radius: 8px;">
+                            <h3 style="margin-bottom: 15px;">关键适应要素</h3>
+                            <ul class="list-item" style="border:none; margin:0; padding:0;">
+                                <li class="list-item">
+                                    <div class="list-icon">1</div>
+                                    <div class="list-content"><h3>时间观念</h3><p>军队以秒计时，养成不拖延、守时的习惯是立足的基础。</p></div>
+                                </li>
+                                <li class="list-item">
+                                    <div class="list-icon">2</div>
+                                    <div class="list-content"><h3>服从意识</h3><p>理解命令与执行之间的逻辑，学会在执行中保持思考。</p></div>
+                                </li>
+                                <li class="list-item">
+                                    <div class="list-icon">3</div>
+                                    <div class="list-content"><h3>战友情谊</h3><p>在集体生活中学会信任与互助，这是生存与战斗的核心纽带。</p></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Survival Skills Section -->
+            <section id="skills" style="margin-bottom: 60px;">
+                <div class="section-header">
+                    <h2>核心生存技能</h2>
+                </div>
+                <div class="grid-3">
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/tent/400/250" alt="野外宿营" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">野外生存</span>
+                            <h3 class="card-title">野外宿营与选址</h3>
+                            <p class="card-text">在陌生环境中搭建庇护所是生存的第一步。学会利用地形、风向和自然材料，建立安全、保暖且防蚊虫的营地。</p>
+                            <a href="#" class="card-link">查看技巧 →</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/rope/400/250" alt="绳结技术" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">战术技能</span>
+                            <h3 class="card-title">基础绳结与战术运用</h3>
+                            <p class="card-text">掌握双套结、八字结等基础绳结，不仅能解决物资捆绑问题，更在紧急情况下用于救援、固定或搭建设施。</p>
+                            <a href="#" class="card-link">查看技巧 →</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/food/400/250" alt="野外觅食" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">生存补给</span>
+                            <h3 class="card-title">野外水源净化与觅食</h3>
+                            <p class="card-text">在缺乏补给的情况下，寻找水源和辨别可食用动植物是生存的关键。掌握简易的过滤与煮沸消毒方法。</p>
+                            <a href="#" class="card-link">查看技巧 →</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Fitness & Training Section -->
+            <section id="fitness" style="margin-bottom: 60px;">
+                <div class="section-header">
+                    <h2>体能强化训练</h2>
+                </div>
+                <div class="grid-2">
+                    <div>
+                        <img src="https://picsum.photos/seed/run/600/350" alt="军事体能训练" style="width:100%; border-radius:8px; box-shadow: var(--shadow);">
+                    </div>
+                    <aside>
+                        <h3 class="sidebar-title">日常训练清单</h3>
+                        <div class="stat-box">
+                            <span class="stat-number">5km</span>
+                            <span class="stat-label">每日标准跑量</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">300+</span>
+                            <span class="stat-label">俯卧撑/日</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">全情投入</span>
+                        </div>
+                        
+                        <div style="margin-top: 30px;">
+                            <h4 style="margin-bottom: 15px;">训练建议</h4>
+                            <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">
+                                <strong>循序渐进：</strong>不要急于求成，避免肌肉拉伤。
+                            </p>
+                            <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">
+                                <strong>核心力量：</strong>加强腹部和背部训练，提升整体运动表现。
+                            </p>
+                            <p style="font-size: 0.9rem; color: #666;">
+                                <strong>恢复与睡眠：</strong>保证每天7-8小时睡眠，肌肉在睡眠中生长。
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" style="margin-bottom: 60px;">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-question">新兵入伍前需要做什么准备？</div>
+                        <div class="faq-answer">
+                            <p>建议提前进行有氧耐力训练（如慢跑）和核心力量训练。调整作息时间，尽量早睡早起。同时，准备好个人洗漱用品和换洗衣物（根据部队要求），并做好心理建设，接受可能出现的严苛管理。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如果身体不适，在军营里该怎么办？</div>
+                        <div class="faq-answer">
+                            <p>军营有严格的医疗保障体系。如果感到身体不适，应第一时间向班长或卫生员报告。隐瞒病情会导致情况恶化，影响训练进度和战友安全。切记“小病不拖，大病不瞒”。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何快速提高五公里越野成绩？</div>
+                        <div class="faq-answer">
+                            <p>提高成绩需要“跑练结合”。除了日常跑步，应加入力量训练（深蹲、硬拉）增强下肢爆发力。同时注意跑步姿势，保持呼吸节奏（如两步一呼、两步一吸），并学会在最后冲刺阶段调整呼吸。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">军营里如何处理人际关系？</div>
+                        <div class="faq-answer">
+                            <p>尊重上级，团结战友。在集体生活中，多做事、少抱怨，主动帮助有困难的战友。保持谦虚的态度，多观察、多学习，不要在言语上与战友发生无谓的争执。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于军营求生</h4>
+                <p style="font-size: 0.9rem; line-height: 1.8;">
+                    致力于为有志于投身军营或进行军事训练的人员提供科学、实用的生存指南与技能培训，助力每一位奋斗者成长。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#intro">入伍指南</a></li>
+                    <li><a href="#skills">技能培训</a></li>
+                    <li><a href="#fitness">体能考核标准</a></li>
+                    <li><a href="#faq">心理调适</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系我们</h4>
+                <ul>
+                    <li>邮箱：contact@junyingqiusheng.com</li>
+                    <li>电话：400-123-4567</li>
+                    <li>地址：国防教育实践基地</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 军营求生指南 版权所有. 仅供学习参考.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
