@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GTV八大综合台直播 - 提供GTV八大综合台在线直播观看服务，包含热门综艺、体育赛事、新闻资讯及高清频道回放，支持多终端流畅播放。">
+    <meta name="keywords" content="GTV八大综合台直播,八大电视,综合台直播,在线电视,高清直播">
+    <title>GTV八大综合台直播-高清在线电视频道与实时节目指南</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f0f4f8;
+            --text-color: #333;
+            --text-light: #666;
+            --accent-color: #e63946;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --max-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            padding: 6px 12px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-light);
+            margin-left: 8px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0056b3 0%, #003d80 100%);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .live-badge {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            width: 100%;
+            padding: 30px 20px;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Live Channels Grid */
+        .channel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .channel-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .channel-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .channel-thumb {
+            width: 100%;
+            height: 90px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .channel-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-icon {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .channel-card:hover .play-icon {
+            opacity: 1;
+        }
+
+        .channel-info {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .channel-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .channel-status {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        .status-live {
+            color: var(--accent-color);
+        }
+
+        /* Player Section */
+        .player-container {
+            background: #000;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 40px;
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .player-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .player-placeholder svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 15px;
+            fill: #fff;
+            opacity: 0.7;
+        }
+
+        .btn-large {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s;
+        }
+
+        .btn-large:hover {
+            background-color: #004494;
+        }
+
+        .current-program {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .program-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .program-time {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Schedule */
+        .schedule-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .schedule-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .schedule-item {
+            display: flex;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+
+        .schedule-time {
+            width: 80px;
+            font-weight: 600;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .schedule-content {
+            flex: 1;
+        }
+
+        .schedule-name {
+            font-weight: 500;
+            display: block;
+        }
+
+        .schedule-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 40px 20px;
+            margin-top: auto;
+        }
+
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .channel-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .schedule-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .schedule-time {
+                width: 100%;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .channel-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .channel-name {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                    <polyline points="17 2 12 7 7 2"></polyline>
+                </svg>
+                <span>GTV八大综合台直播</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#channels">频道列表</a></li>
+                    <li><a href="#schedule">节目表</a></li>
+                    <li><a href="#help">帮助</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索节目...">
+                <button>&#128269;</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>高清流畅的GTV八大综合台直播体验</h1>
+        <p>汇集热门综艺、体育赛事、新闻资讯及生活频道，支持多终端在线观看，随时随地掌握最新动态。</p>
+        <div style="margin-top: 20px;">
+            <span class="live-badge">● 正在直播</span>
+            <span class="live-badge">● 4K高清</span>
+        </div>
+    </section>
+
+    <main>
+        <!-- Player Section -->
+        <section class="player-section">
+            <div class="section-title">当前直播</div>
+            <div class="player-container" id="mainPlayer">
+                <div class="player-placeholder">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <p style="margin-bottom: 20px;">点击下方频道开始观看直播</p>
+                    <button class="btn-large" onclick="selectChannel(0)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        立即播放
+                    </button>
+                    <div class="current-program">
+                        <div class="program-title">新闻综合频道</div>
+                        <div class="program-time">19:00 - 20:00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Channel List -->
+        <section id="channels">
+            <div class="section-title">
+                <h2>频道导航</h2>
+                <span style="font-size: 0.9rem; font-weight: normal; color: #666;">共 8 个频道</span>
+            </div>
+            <div class="channel-grid" id="channelGrid">
+                <!-- Channels will be populated by JS -->
+            </div>
+        </section>
+
+        <!-- Schedule -->
+        <section id="schedule">
+            <div class="section-title">
+                <h2>今日节目预告</h2>
+            </div>
+            <div class="schedule-container">
+                <div class="schedule-list" id="scheduleList">
+                    <!-- Schedule items populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="help">
+            <div class="section-title">
+                <h2>常见问题与帮助</h2>
+            </div>
+            <div style="background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
+                <details style="margin-bottom: 10px; cursor: pointer;">
+                    <summary style="font-weight: 600; padding: 5px;">直播画面卡顿怎么办？</summary>
+                    <p style="margin-top: 8px; color: #666; padding-left: 5px;">请检查您的网络连接是否稳定，或尝试切换至较低的清晰度（标清/高清）以获得更流畅的体验。如果问题持续存在，请刷新页面重试。</p>
+                </details>
+                <details style="margin-bottom: 10px; cursor: pointer;">
+                    <summary style="font-weight: 600; padding: 5px;">支持哪些设备观看？</summary>
+                    <p style="margin-top: 8px; color: #666; padding-left: 5px;">本服务支持电脑浏览器、智能手机及平板电脑访问，随时随地均可观看GTV八大综合台直播。</p>
+                </details>
+                <details style="margin-bottom: 10px; cursor: pointer;">
+                    <summary style="font-weight: 600; padding: 5px;">节目表是实时更新的吗？</summary>
+                    <p style="margin-top: 8px; color: #666; padding-left: 5px;">我们的节目表会根据实际播出情况进行更新，建议您在观看前查看当天的详细预告，以免错过精彩内容。</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4>关于GTV直播</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6;">我们致力于提供最稳定、最清晰的GTV八大综合台在线直播服务，为用户带来便捷的电视观看体验。</p>
+            </div>
+            <div class="footer-col">
+                <h4>热门频道</h4>
+                <ul>
+                    <li><a href="#">新闻综合频道</a></li>
+                    <li><a href="#">综合娱乐频道</a></li>
+                    <li><a href="#">体育频道</a></li>
+                    <li><a href="#">财经频道</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">回看功能</a></li>
+                    <li><a href="#">频道介绍</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 GTV八大综合台直播平台. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <script>
+        // 模拟频道数据
+        const channels = [
+            { id: 1, name: "新闻综合频道", category: "资讯", imgSeed: "news" },
+            { id: 2, name: "综合娱乐频道", category: "综艺", imgSeed: "entertainment" },
+            { id: 3, name: "体育频道", category: "体育", imgSeed: "sports" },
+            { id: 4, name: "财经频道", category: "财经", imgSeed: "finance" },
+            { id: 5, name: "都市生活频道", category: "生活", imgSeed: "life" },
+            { id: 6, name: "影视频道", category: "影视", imgSeed: "movie" },
+            { id: 7, name: "少儿频道", category: "少儿", imgSeed: "kids" },
+            { id: 8, name: "历史人文频道", category: "文化", imgSeed: "history" }
+        ];
+
+        // 模拟节目表数据
+        const scheduleData = [
+            { time: "18:00", title: "晚间新闻", desc: "国内外最新时事报道" },
+            { time: "19:00", title: "黄金剧场", desc: "热播电视剧《岁月如歌》" },
+            { time: "20:00", title: "新闻联播", desc: "央视新闻重播" },
+            { time: "20:30", title: "体育大本营", desc: "NBA季后赛集锦" },
+            { time: "21:00", title: "快乐大本营", desc: "热门综艺节目直播" },
+            { time: "22:00", title: "今日关注", desc: "深度财经分析" },
+            { time: "23:00", title: "电影之夜", desc: "经典老片放映" }
+        ];
+
+        // 渲染频道列表
+        function renderChannels() {
+            const grid = document.getElementById('channelGrid');
+            grid.innerHTML = channels.map((channel, index) => `
+                <div class="channel-card" onclick="selectChannel(${index})">
+                    <div class="channel-thumb">
+                        <img src="https://picsum.photos/seed/${channel.imgSeed}/300/200" alt="${channel.name}" loading="lazy">
+                        <div class="play-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="channel-info">
+                        <div class="channel-name">${channel.name}</div>
+                        <div class="channel-status status-live">● 直播中</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 渲染节目表
+        function renderSchedule() {
+            const list = document.getElementById('scheduleList');
+            list.innerHTML = scheduleData.map(item => `
+                <div class="schedule-item">
+                    <div class="schedule-time">${item.time}</div>
+                    <div class="schedule-content">
+                        <span class="schedule-name">${item.title}</span>
+                        <div class="schedule-desc">${item.desc}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 模拟选择频道播放
+        function selectChannel(index) {
+            const channel = channels[index];
+            const player = document.getElementById('mainPlayer');
+            const programTitle = document.querySelector('.program-title');
+            const programTime = document.querySelector('.program-time');
+            
+            // 模拟加载状态
+            player.innerHTML = `
+                <div class="player-placeholder" style="background: #1a1a1a;">
+                    <div style="font-size: 2rem; margin-bottom: 20px;">📺</div>
+                    <p>正在加载 ${channel.name} 直播信号...</p>
+                </div>
+            `;
+
+            // 模拟延迟后恢复
+            setTimeout(() => {
+                player.innerHTML = `
+                    <div class="player-placeholder" style="background: #000;">
+                        <div style="font-size: 4rem; margin-bottom: 20px;">📡</div>
+                        <p style="font-size: 1.2rem; margin-bottom: 30px;">${channel.name} 播放器已就绪</p>
+                        <div class="current-program">
+                            <div class="program-title">${channel.name} - 直播中</div>
+                            <div class="program-time">信号源: GTV-HD-01</div>
+                        </div>
+                    </div>
+                `;
+                programTitle.textContent = channel.name;
+                programTime.textContent = "24小时不间断直播";
+            }, 800);
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            renderChannels();
+            renderSchedule();
+        });
+    </script>
+</body>
+</html>
