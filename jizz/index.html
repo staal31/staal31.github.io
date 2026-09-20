@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JIZZJIZZ护士 老师 - 专业医疗护理指南与职业发展建议。了解护士工作职责、老师教学技巧、医患沟通方法及医疗行业最新资讯。">
+    <meta name="keywords" content="JIZZJIZZ护士 老师, 护士工作, 医疗教学, 护理指南, 职业发展">
+    <title>JIZZJIZZ护士 老师 - 医疗护理与教学职业指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-dark: #004c99;
+            --secondary-color: #f0f7ff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e1e4e8;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+            margin-top: -40px;
+            padding-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .section-link {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 160px;
+            background-color: #e9ecef;
+            position: relative;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-category {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--bg-white);
+            padding: 24px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .list-icon {
+            width: 32px;
+            height: 32px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .list-content h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .list-content p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 16px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fafbfc;
+        }
+
+        .faq-question:hover {
+            background-color: #f0f4f8;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 200px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: #95a5a6;
+        }
+
+        /* Utility */
+        .text-center { text-align: center; }
+        .text-primary { color: var(--primary-color); }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .badge-new { background-color: #e3f2fd; color: #1976d2; }
+        .badge-hot { background-color: #ffebee; color: #c62828; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.58L18 11l-6 6z"/>
+                </svg>
+                医护职业通
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">护理指南</a></li>
+                    <li><a href="#">教学资源</a></li>
+                    <li><a href="#">行业资讯</a></li>
+                    <li><a href="#">职业规划</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-button">加入社区</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>JIZZJIZZ护士 老师</h1>
+            <p>探索医疗护理与医学教育的专业领域。获取护士工作技巧、老师教学方法以及医患沟通的实用指南。</p>
+            <div class="hero-tags">
+                <span class="tag">临床护理规范</span>
+                <span class="tag">医患沟通艺术</span>
+                <span class="tag">护理教学策略</span>
+                <span class="tag">职业素养提升</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container main-grid">
+        <!-- Main Column -->
+        <main>
+            <!-- Featured Section -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">热门护理指南</h2>
+                    <a href="#" class="section-link">查看更多 &rarr;</a>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/nurse1/400/250" alt="护士日常工作">
+                            <span class="card-category">临床实务</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">临床护士的一天：高效工作流程与时间管理</h3>
+                            <p class="card-desc">了解如何在繁忙的护理工作中合理安排时间，平衡医疗操作与患者沟通，提升工作效率。</p>
+                            <div class="card-meta">
+                                <span>2023-10-24</span>
+                                <span>阅读 2.4k</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/teach1/400/250" alt="护理教学">
+                            <span class="card-category">教学培训</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">如何成为一名优秀的护理带教老师</h3>
+                            <p class="card-desc">分享护理带教经验，探讨如何激发实习生的学习兴趣，培养严谨的医疗护理思维。</p>
+                            <div class="card-meta">
+                                <span>2023-10-22</span>
+                                <span>阅读 1.8k</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/doc1/400/250" alt="医患沟通">
+                            <span class="card-category">沟通技巧</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">构建信任：护士与老师的高效沟通法则</h3>
+                            <p class="card-desc">探讨在医疗环境中，护士与老师之间如何通过有效沟通减少误解，提升团队协作效率。</p>
+                            <div class="card-meta">
+                                <span>2023-10-20</span>
+                                <span>阅读 3.1k</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Content List -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">最新行业动态</h2>
+                </div>
+                <div class="card-grid" style="grid-template-columns: 1fr;">
+                    <article class="card" style="flex-direction: row; align-items: center;">
+                        <div class="card-image" style="width: 200px; height: 140px; flex-shrink: 0;">
+                            <img src="https://picsum.photos/seed/news1/200/140" alt="行业新闻">
+                        </div>
+                        <div class="card-content" style="padding: 0 20px;">
+                            <h3 class="card-title" style="margin-bottom: 8px;">2024年护理教育改革新趋势</h3>
+                            <p class="card-desc">随着医疗技术的发展，护理教育正逐步引入模拟教学和数字化管理，以适应新时代的需求。</p>
+                        </div>
+                    </article>
+                    <article class="card" style="flex-direction: row; align-items: center;">
+                        <div class="card-image" style="width: 200px; height: 140px; flex-shrink: 0;">
+                            <img src="https://picsum.photos/seed/news2/200/140" alt="职业发展">
+                        </div>
+                        <div class="card-content" style="padding: 0 20px;">
+                            <h3 class="card-title" style="margin-bottom: 8px;">护士晋升与管理岗位的路径分析</h3>
+                            <p class="card-desc">从临床护士到护理管理者，需要具备哪些核心能力？本文详细解析职业发展路径。</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar Column -->
+        <aside>
+            <div class="sidebar-widget">
+                <h3 class="widget-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    常见问题 (FAQ)
+                </h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        护士和老师在医疗团队中有什么区别？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        护士主要负责患者的日常护理、病情观察和执行医嘱，是医疗团队中直接接触患者最多的角色。老师（或带教老师）则侧重于对实习生、新入职护士的指导和培训，传授专业技能和职业素养，确保教学质量。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        新手护士如何快速适应临床工作？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        建议制定详细的学习计划，多向带教老师请教，注重理论与实践的结合。同时，保持良好的沟通习惯，建立与患者及同事的信任关系，是适应工作的关键。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        护理教学中常用的评估方法有哪些？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        常用的方法包括理论考试、操作技能考核、床边教学观察以及病例讨论分析。现代护理教学越来越强调过程性评价和反思性学习。
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="widget-title">资源下载</h3>
+                <ul class="list-item">
+                    <div class="list-icon">📄</div>
+                    <div class="list-content">
+                        <h4>护理操作规范手册</h4>
+                        <p>PDF文档 · 2.5MB</p>
+                    </div>
+                </ul>
+                <ul class="list-item">
+                    <div class="list-icon">📝</div>
+                    <div class="list-content">
+                        <h4>医患沟通话术模板</h4>
+                        <p>Word文档 · 1.2MB</p>
+                    </div>
+                </ul>
+                <ul class="list-item">
+                    <div class="list-icon">🎓</div>
+                    <div class="list-content">
+                        <h4>护理教学PPT课件</h4>
+                        <p>PPTX · 8.0MB</p>
+                    </div>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>医护职业通</h3>
+                    <p style="font-size: 0.9rem; color: #bdc3c7; line-height: 1.6;">
+                        专注于为医护人员提供专业的学习资源、职业指导和行业资讯。致力于提升医疗服务质量与教育水平。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h3>栏目导航</h3>
+                    <ul>
+                        <li><a href="#">护理实务</a></li>
+                        <li><a href="#">医学教育</a></li>
+                        <li><a href="#">心理疏导</a></li>
+                        <li><a href="#">职业规划</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <ul>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入团队</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2023 医护职业通. All Rights Reserved. 本站内容仅供学习与交流使用.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 折叠交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
