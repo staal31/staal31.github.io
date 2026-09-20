@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>铁莲花 - 专业中药饮片与养生药材选购指南</title>
+    <meta name="description" content="铁莲花专业药材选购指南，提供铁莲花产地、功效、炮制方法及鉴别技巧，权威中医科普与合理用药建议。">
+    <meta name="keywords" content="铁莲花, 铁莲花功效, 铁莲花中药, 铁莲花鉴别, 中药材选购, 养生药材">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-green: #2e7d32;
+            --secondary-green: #4caf50;
+            --accent-brown: #795548;
+            --bg-light: #f9f9f7;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-brown);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 16px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-green);
+        }
+
+        .cta-button {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/medicinal_plant/1600/600') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Card Grid for Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary-green);
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card h3 {
+            color: var(--accent-brown);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .benefit-card p {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        /* Info Block */
+        .info-block {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .info-block h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        .info-block p, .info-block li {
+            margin-bottom: 10px;
+            color: var(--text-gray);
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-widget {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-widget h4 {
+            color: var(--accent-brown);
+            margin-bottom: 15px;
+            font-size: 18px;
+            border-left: 4px solid var(--secondary-green);
+            padding-left: 10px;
+        }
+
+        .guide-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            font-size: 14px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .guide-list li::before {
+            content: "•";
+            color: var(--secondary-green);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: var(--primary-green);
+            color: var(--white);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background-color: #f5f5f5;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-gray);
+            display: none;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-green);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">铁莲花<span>科普</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#introduction">药材介绍</a></li>
+                    <li><a href="#benefits">功效与作用</a></li>
+                    <li><a href="#usage">鉴别与选购</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">咨询医师</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>铁莲花</h1>
+                <p>清热解毒，散瘀消肿。了解传统中药材铁莲花的药用价值、科学炮制方法及安全使用指南。</p>
+                <a href="#introduction" class="cta-button" style="background-color: var(--white); color: var(--primary-green);">阅读详情</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Left Content -->
+            <div class="content">
+                <section id="introduction">
+                    <div class="section-title">什么是铁莲花？</div>
+                    <div class="info-block">
+                        <p>铁莲花（学名：Clematis finetiana），又名威灵仙、铁线莲等，是毛茛科铁线莲属的多年生草本植物。其根茎和藤茎在传统中医学中具有一定的药用价值。铁莲花多生长于山坡、沟谷或林缘，其植株具有攀援性，花色通常为白色或淡紫色。</p>
+                        <p>在中药材分类中，铁莲花的药用部位主要为其干燥的根及根茎或藤茎。其性味辛、苦，性温，归肝、膀胱经。由于其根茎质地较硬，形似铁丝，故得名“铁莲”。在现代药理研究中，铁莲花提取物显示出一定的抗炎和镇痛活性，但具体应用需在专业医师指导下进行。</p>
+                    </div>
+                </section>
+
+                <section id="benefits">
+                    <div class="section-title">主要功效与作用</div>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <h3>祛风除湿</h3>
+                            <p>铁莲花常用于治疗风湿痹痛、肢体麻木及关节疼痛。其通络作用有助于改善局部气血循环。</p>
+                        </div>
+                        <div class="benefit-card">
+                            <h3>活血化瘀</h3>
+                            <p>对于跌打损伤、瘀血肿痛等症状，铁莲花具有一定的辅助治疗作用，能够促进淤血消散。</p>
+                        </div>
+                        <div class="benefit-card">
+                            <h3>通络止痛</h3>
+                            <p>由于其辛散温通的特性，常用于治疗胃痛、牙痛等实证疼痛，具有显著的止痛效果。</p>
+                        </div>
+                        <div class="benefit-card">
+                            <h3>利水消肿</h3>
+                            <p>在中医临床应用中，铁莲花也常被用于辅助治疗水肿、小便不利等水液代谢障碍。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="usage">
+                    <div class="section-title">鉴别与选购指南</div>
+                    <div class="info-block">
+                        <h3>如何辨别优质铁莲花？</h3>
+                        <p>选购铁莲花药材时，应注意以下几点：</p>
+                        <ul>
+                            <li><strong>看外观：</strong>优质的铁莲花根茎通常呈圆柱形或结节状，表面灰黄色或棕褐色，有纵皱纹，质地坚硬，不易折断。</li>
+                            <li><strong>闻气味：</strong>具有特殊的清香或微弱的土腥气，无霉味。</li>
+                            <li><strong>尝味道：</strong>味微苦，嚼之有麻舌感。</li>
+                            <li><strong>防伪：</strong>市场上可能存在其他毛茛科植物的混淆品，建议选择正规药房或医疗机构购买的道地药材。</li>
+                        </ul>
+                        <div style="margin-top: 20px;">
+                            <table class="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>特征</th>
+                                        <th>优质铁莲花</th>
+                                        <th>劣质/混淆品</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>质地</td>
+                                        <td>坚硬，断面纤维性</td>
+                                        <td>松软，易碎</td>
+                                    </tr>
+                                    <tr>
+                                        <td>颜色</td>
+                                        <td>灰黄或棕褐</td>
+                                        <td>灰黑或发绿</td>
+                                    </tr>
+                                    <tr>
+                                        <td>气味</td>
+                                        <td>微苦，有特殊气味</td>
+                                        <td>无味或霉味</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="faq">
+                    <div class="section-title">常见问题 (FAQ)</div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">铁莲花有毒吗？</div>
+                        <div class="faq-answer">是的，铁莲花含有生物碱成分，具有一定毒性。误食或过量服用可能导致恶心、呕吐、腹痛等中毒症状。因此，必须严格控制剂量，并在医生指导下使用。</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">孕妇可以使用铁莲花吗？</div>
+                        <div class="faq-answer">不建议孕妇使用。由于其具有活血化瘀和通络的特性，可能会对胎儿造成不良影响，甚至导致流产风险。</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">铁莲花可以长期服用吗？</div>
+                        <div class="faq-answer">不可以。铁莲花属于峻下逐水或破血消症类药物，长期服用会损伤正气。建议症状缓解后即停药，或遵医嘱调整疗程。</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">如何正确炮制铁莲花？</div>
+                        <div class="faq-answer">传统炮制方法通常包括净制、润切、干燥等步骤。为了降低毒性，有时会使用醋制等方法，具体工艺需由专业中药师操作。</div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside>
+                <div class="sidebar-widget">
+                    <h4>用药小贴士</h4>
+                    <ul class="guide-list">
+                        <li>铁莲花不宜与浓茶同服</li>
+                        <li>服药期间忌食生冷辛辣</li>
+                        <li>阴虚火旺者慎用</li>
+                        <li>遵医嘱控制每日用量</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>相关药材推荐</h4>
+                    <ul class="guide-list">
+                        <li><a href="#">威灵仙</a></li>
+                        <li><a href="#">鸡血藤</a></li>
+                        <li><a href="#">川芎</a></li>
+                        <li><a href="#">木香</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget" id="contact">
+                    <h4>咨询专业医师</h4>
+                    <p style="font-size: 14px; margin-bottom: 15px;">在使用铁莲花或任何中药材前，请务必咨询中医师，以确保用药安全。</p>
+                    <a href="#" class="cta-button" style="width: 100%; text-align: center; display: block;">预约挂号</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于铁莲花</h4>
+                <p style="font-size: 14px; line-height: 1.8;">本网站致力于提供传统中药材铁莲花的科学科普信息，帮助大众正确认识中药材，促进合理用药。内容仅供参考，不作为医疗诊断依据。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#introduction">药材介绍</a></li>
+                    <li><a href="#benefits">功效作用</a></li>
+                    <li><a href="#usage">鉴别选购</a></li>
+                    <li><a href="#faq">安全须知</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>免责声明</h4>
+                <ul>
+                    <li>中药材使用需谨慎</li>
+                    <li>请勿自行随意配药</li>
+                    <li>本站不提供在线诊疗</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 铁莲花科普指南. All Rights Reserved. 本页面内容仅供科普教育使用。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 手风琴效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
