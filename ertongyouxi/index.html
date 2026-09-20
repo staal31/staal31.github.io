@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>儿童游戏-安全益智的在线娱乐与学习平台</title>
+    <meta name="description" content="本站提供精选的儿童游戏资源，涵盖益智、冒险、教育及休闲类游戏。我们专注于保护儿童视力，确保游戏内容健康、适龄，为家长和孩子打造一个安全的数字娱乐空间。">
+    <meta name="keywords" content="儿童游戏,益智游戏,儿童在线游戏,安全教育,寓教于乐">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #FF9F43;
+            --accent-color: #FF6B6B;
+            --bg-color: #F7F9FC;
+            --card-bg: #FFFFFF;
+            --text-main: #2C3E50;
+            --text-sub: #7F8C8D;
+            --spacing-unit: 16px;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .header-actions button:hover {
+            background-color: #357ABD;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #E0F7FA 0%, #E1F5FE 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .search-bar {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 30px;
+            border: 2px solid transparent;
+            box-shadow: var(--shadow);
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-bar input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            bottom: 5px;
+            padding: 0 25px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* Safety Banner */
+        .safety-banner {
+            background-color: #FFF3E0;
+            border-left: 5px solid var(--secondary-color);
+            padding: 16px;
+            margin: 20px auto;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 900px;
+        }
+
+        .safety-icon {
+            font-size: 24px;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background-color: #E0E0E0;
+            margin-left: 16px;
+        }
+
+        /* Game Grid */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .game-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .game-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .category-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        .age-badge {
+            background-color: #E8F5E9;
+            color: #2E7D32;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Features Section */
+        .features-section {
+            background-color: var(--card-bg);
+            padding: 40px 0;
+            margin-top: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .feature-item {
+            padding: 20px;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #E3F2FD;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .feature-text {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        /* Guide Section */
+        .guide-section {
+            padding: 40px 0;
+        }
+
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .guide-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .guide-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #E0E0E0;
+            line-height: 1;
+        }
+
+        .guide-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+
+        .guide-content p {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C3E50;
+            color: #BDC3C7;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 16px 0;
+                gap: 16px;
+            }
+
+            nav ul {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .game-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                🎮 儿童游戏<span>乐园</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">益智训练</a></li>
+                    <li><a href="#">创意工坊</a></li>
+                    <li><a href="#">安全指南</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button>家长控制中心</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>探索无限乐趣，安全快乐成长</h1>
+            <p>专为3-12岁儿童设计的在线游戏平台，集教育、娱乐与互动于一体。通过游戏培养逻辑思维与创造力，家长放心，孩子开心。</p>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="搜索您喜欢的游戏，如：拼图、画画、数学...">
+                <button>搜索</button>
+            </div>
+
+            <div class="safety-banner">
+                <span class="safety-icon">🛡️</span>
+                <div>
+                    <strong>严格的安全过滤系统：</strong>
+                    <span style="font-size: 0.9rem; color: #555;">所有游戏内容经过人工审核，无广告、无弹窗、无诱导消费。</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container main-content">
+        
+        <!-- 热门推荐 -->
+        <section>
+            <h2 class="section-title">🔥 热门推荐</h2>
+            <div class="game-grid">
+                <!-- Game Card 1 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <span class="category-tag">益智</span>
+                        <img src="https://picsum.photos/seed/kids1/400/300" alt="动物拼图游戏">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">趣味动物拼图</h3>
+                        <p class="card-desc">通过拖拽拼图碎片，认识各种可爱的动物，锻炼空间想象力。</p>
+                        <div class="card-footer">
+                            <span class="age-badge">3-6岁</span>
+                            <span>⭐ 4.9</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game Card 2 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <span class="category-tag">数学</span>
+                        <img src="https://picsum.photos/seed/kids2/400/300" alt="数学大冒险">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">数学大冒险</h3>
+                        <p class="card-desc">在森林探险中学习加减法，让枯燥的数字变得生动有趣。</p>
+                        <div class="card-footer">
+                            <span class="age-badge">5-8岁</span>
+                            <span>⭐ 4.8</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game Card 3 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <span class="category-tag">创意</span>
+                        <img src="https://picsum.photos/seed/kids3/400/300" alt="小小画家">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">小小画家涂色本</h3>
+                        <p class="card-desc">自由选择颜色和笔刷，为卡通人物上色，激发艺术潜能。</p>
+                        <div class="card-footer">
+                            <span class="age-badge">3-10岁</span>
+                            <span>⭐ 4.9</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game Card 4 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <span class="category-tag">音乐</span>
+                        <img src="https://picsum.photos/seed/kids4/400/300" alt="节奏大师">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">快乐打击乐</h3>
+                        <p class="card-desc">跟随节奏敲击乐器，感受音乐的魅力，培养节奏感。</p>
+                        <div class="card-footer">
+                            <span class="age-badge">4-7岁</span>
+                            <span>⭐ 4.7</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 核心优势 -->
+        <section class="features-section">
+            <h2 class="section-title">为什么选择我们？</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🧠</div>
+                    <h3 class="feature-title">寓教于乐</h3>
+                    <p class="feature-text">每一款游戏都融入了认知、逻辑或艺术元素，让孩子在玩中学。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">👁️</div>
+                    <h3 class="feature-title">护眼模式</h3>
+                    <p class="feature-text">采用柔和的护眼色彩，支持蓝光过滤，保护孩子稚嫩的双眼。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">家长监护</h3>
+                    <p class="feature-text">提供使用时长管理、游戏时长限制及消费控制功能。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">离线游玩</h3>
+                    <p class="feature-text">支持下载至本地，无需担心流量消耗，随时随地畅玩。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 选购指南 -->
+        <section class="guide-section">
+            <h2 class="section-title">家长选购指南</h2>
+            <div class="guide-list">
+                <div class="guide-item">
+                    <div class="guide-number">01</div>
+                    <div class="guide-content">
+                        <h3>根据年龄选择</h3>
+                        <p>3-5岁的孩子适合简单的点击、拖拽和认知类游戏；6-9岁可以接触逻辑推理和基础数学；10岁以上可尝试复杂的策略游戏。</p>
+                    </div>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-number">02</div>
+                    <div class="guide-content">
+                        <h3>关注游戏内容</h3>
+                        <p>避免暴力、恐怖或含有成人向暗示的游戏内容。优先选择色彩明亮、角色友善、情节正向的儿童游戏。</p>
+                    </div>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-number">03</div>
+                    <div class="guide-content">
+                        <h3>控制屏幕时间</h3>
+                        <p>遵循“20-20-20”法则，每玩20分钟游戏，眺望20英尺（约6米）外的地方20秒，并确保每天总时长不超过1-2小时。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">致力于为全球儿童提供最优质、最安全的数字娱乐体验，通过科技助力儿童全面发展。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>游戏分类</h4>
+                    <ul>
+                        <li><a href="#">逻辑思维</a></li>
+                        <li><a href="#">语言学习</a></li>
+                        <li><a href="#">创意绘画</a></li>
+                        <li><a href="#">音乐律动</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">账号注册</a></li>
+                        <li><a href="#">家长模式教程</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">家长交流群</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 儿童游戏乐园 版权所有 | 本站内容仅供娱乐与教育参考</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
